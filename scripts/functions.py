@@ -51,4 +51,4 @@ def measure_read_csv_time(package_name, task, csv_file_path):
 
     elapsed_time = end_time - start_time
     spark.stop()
-    return package_name, task, elapsed_time
+    return package_name, elapsed_time
