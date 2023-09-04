@@ -1,0 +1,18 @@
+version: '3.10'
+services:
+  pyspark-notebook:
+    user: root
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    ports:
+      - '8888:8888'
+    volumes:  
+      - .:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=True
+      - GRANT_SUDO='yes'
+      - CHOWN_HOME=yes
+      - CHOWN_HOME_OPTS=-R
+      - NB_UID=1002
+      - NB_GID=1002
