@@ -3,3 +3,5 @@ polars
 plotly
 matplotlib
 seaborn
+chart_studio
+configparser
